@@ -1,0 +1,25 @@
+﻿@model List<ListingEmployees.Models.Employee>
+@{
+    ViewData["Title"] = "GetEmployeeList";
+}
+
+<h1>GetEmployeeList</h1>
+
+
+@foreach(var employee in Model)
+ {
+    <div class="row col-md-4">
+        <table class="@(employee.IsPermanent ? "font-weight-bold":"") ">
+            <tr>
+                <td>Name:</td>
+                <td>@employee.Name</td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td>@employee.Salary</td>
+            </tr>
+
+        </table>
+    </div>
+ }  
+
